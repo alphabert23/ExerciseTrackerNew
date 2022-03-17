@@ -75,9 +75,9 @@ with mp_pose.Pose(min_detection_confidence=0.5, min_tracking_confidence=0.5) as 
                         )
 
             # Sit-up counter logic
-            if angle < 40:
+            if angle < 50:
                 stage = "up"
-            if angle > 100 and stage == 'up':
+            if angle > 90 and stage == 'up':
                 stage = "down"
                 counter += 1
                 print(counter)
